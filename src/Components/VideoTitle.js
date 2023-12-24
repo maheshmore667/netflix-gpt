@@ -2,12 +2,12 @@ import React from "react";
 
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className="w-full">
-      <div className="absolute top-1/4 pl-20 w-2/4">
-        <p className="relative font-bold text-2xl  font-sans hover:text-3xl">
+    <div className="w-full absolute bg-gradient-to-r from-black aspect-video">
+      <div className="absolute top-[35%] pl-24 w-[40%] text-white">
+        <p className="relative font-bold text-3xl  font-sans ">
           {title}
         </p>
-        <p className="relative mt-5 font-['Lucida_Handwriting'] hover:text-xl">
+        <p className="relative mt-5 font-['Lucida_Handwriting'] ">
           {overview}
         </p>
         <div className="relative mt-5">
