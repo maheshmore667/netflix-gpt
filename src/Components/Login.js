@@ -7,6 +7,7 @@ import {
 } from "../Utils/formValidator";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Utils/firebase";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -16,6 +17,7 @@ const Login = () => {
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
+  const navigate = useNavigate();
 
   const handleIsSignIn = () => {
     setIsSignIn(!isSignIn);
@@ -36,8 +38,7 @@ const Login = () => {
           password?.current?.value
         )
           .then((userCredential) => {
-            const user = userCredential.user;
-            console.log(user);
+            navigate("/browse");
           })
           .catch((error) => {
             const errorMessage = error.message;
@@ -49,9 +50,7 @@ const Login = () => {
           email?.current?.value,
           password?.current?.value)
           .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            console.log(user);
+            navigate("/browse");
           })
           .catch((error) => {
             const errorMessage = error.message;
