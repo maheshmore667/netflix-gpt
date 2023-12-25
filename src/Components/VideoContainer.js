@@ -11,7 +11,7 @@ const VideoContainer = ({ id }) => {
     <div className="w-full aspect-video">
       <iframe
        className="w-full aspect-video"
-        src={`${YOUTUBE_TRAILER}${trailer?.key}?autoplay=1&mute=1`}
+        src={`${YOUTUBE_TRAILER}${trailer?.key}?autoplay=1&mute=1&loop=1`}
         title="YouTube video player"
         
       ></iframe>
