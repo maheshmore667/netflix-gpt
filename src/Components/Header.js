@@ -6,6 +6,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../Store/Slice/userSlice";
 import { useNavigate } from "react-router-dom";
 import { LOGO_URL } from "../Utils/constants";
+import {updateShowGptAttribute} from "../Store/Slice/gptSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -37,16 +38,29 @@ const Header = () => {
       });
   };
 
+  const updateGptAttribute = () =>{
+    dispatch(updateShowGptAttribute());
+  }
+
   return (
     <div className="w-full absolute flex justify-between py-2 px-2 bg-gradient-to-t from-black content-center z-30">
       <img className="w-52 " src={LOGO_URL} alt="logo" />
       {user && (
+        <div className="flex">
+         <button
+          className="text-white font-bold bg-red-800 my-6 px-2 mr-2 rounded-md py-1 font-size-md" 
+          onClick={updateGptAttribute}
+        >
+          Gpt Search
+        </button>
         <button
-          className="text-red-500 font-bold bg-white my-6 px-2 rounded-md py-1 font-size-md"
+          className="text-red-500 font-bold bg-white my-6 px-2 mr-2 rounded-md py-1 font-size-md"
           onClick={handleSignOut}
         >
           SignOut
         </button>
+        </div>
+        
       )}
     </div>
   );
