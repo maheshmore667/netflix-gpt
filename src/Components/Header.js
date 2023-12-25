@@ -5,8 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../Store/Slice/userSlice";
 import { useNavigate } from "react-router-dom";
-import { LOGO_URL } from "../Utils/constants";
+import { LANGMAP, LOGO_URL } from "../Utils/constants";
 import {updateShowGptAttribute} from "../Store/Slice/gptSlice";
+import { updateLangKey } from "../Store/Slice/appConfigSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -42,11 +43,20 @@ const Header = () => {
     dispatch(updateShowGptAttribute());
   }
 
+  const handleLanguageChange = (e) =>{
+   dispatch(updateLangKey(e?.target?.value))
+  }
+
   return (
     <div className="w-full absolute flex justify-between py-2 px-2 bg-gradient-to-t from-black content-center z-30">
       <img className="w-52 " src={LOGO_URL} alt="logo" />
       {user && (
         <div className="flex">
+          <select className="text-white font-bold bg-purple-800 my-6 px-2 mr-2 rounded-md py-1" onChange={handleLanguageChange}> 
+            {
+              Object.keys(LANGMAP)?.map((key)=><option key={key} value={key} >{LANGMAP[key]}</option>)
+            }
+          </select>
          <button
           className="text-white font-bold bg-red-800 my-6 px-2 mr-2 rounded-md py-1 font-size-md" 
           onClick={updateGptAttribute}

@@ -7,3 +7,11 @@ export const UPCOMING_MOVIES = "https://api.themoviedb.org/3/movie/upcoming?page
 export const MOVIE_TRAILER = "https://api.themoviedb.org/3/movie/"
 export const YOUTUBE_TRAILER = "https://www.youtube.com/embed/"
 export const POSTER_URL = "https://image.tmdb.org/t/p/w500/"
+export const BG_URL = 'https://assets.nflxext.com/ffe/siteui/vlv3/563192ea-ac0e-4906-a865-ba9899ffafad/6b2842d1-2339-4f08-84f6-148e9fcbe01b/IN-en-20231218-popsignuptwoweeks-perspective_alpha_website_large.jpg'
+
+
+export const LANGMAP =  {
+    "en" : "English",
+    "hindi" : "Hindi",
+    "marathi" : "Marathi"
+}

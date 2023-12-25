@@ -9,6 +9,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from "../Utils/firebase";
 import { useDispatch } from "react-redux";
 import { updateNameOfUser } from "../Store/Slice/userSlice";
+import { BG_URL } from "../Utils/constants";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -70,7 +71,7 @@ const Login = () => {
   return (
     <div className="w-full h-full">
       <Header />
-      <div className=" w-full h-full bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/563192ea-ac0e-4906-a865-ba9899ffafad/6b2842d1-2339-4f08-84f6-148e9fcbe01b/IN-en-20231218-popsignuptwoweeks-perspective_alpha_website_large.jpg')]">
+      <div className="w-full h-full" style={{ backgroundImage: `url('${BG_URL}')` }}>
         <div className="w-full h-full flex flex-wrap justify-center content-center">
           <form className="sm : w-4/12  bg-black rounded-md flex flex-col text-white content-center flex-wrap opacity-90">
             <label className="font-bold text-2xl my-5 mx-auto">
