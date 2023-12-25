@@ -11,8 +11,8 @@ const VideoTitle = ({ title, overview }) => {
           {overview}
         </p>
         <div className="relative mt-5">
-          <button className="bg-red-900 font-bold text-white px-4 py-2 mx-2 rounded-md">▶️ Play</button>
-          <button className="bg-red-900 font-bold text-white px-4 py-2 mx-2 rounded-md"> ℹ️ More</button>
+          <button className="bg-white font-bold text-black px-4 py-2 mx-2 rounded-md hover:bg-opacity-50">▶️ Play</button>
+          <button className="bg-white font-bold text-black px-4 py-2 mx-2 rounded-md hover:bg-opacity-50"> ℹ️ More</button>
         </div>
       </div>
     </div>

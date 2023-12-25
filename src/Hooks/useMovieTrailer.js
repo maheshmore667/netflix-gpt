@@ -27,7 +27,7 @@ const useMovieTrailer = (id) =>{
       (video) => video?.type === "Trailer"
     );
     const trailer =
-      trailerVideos?.length > 0 ? trailerVideos[0] : trailerVideos[0];
+      trailerVideos?.length > 0 ? trailerVideos[0] : movieVideos?.results[0];
     dispatch(addMovieTrailer(trailer));
   };
 }
