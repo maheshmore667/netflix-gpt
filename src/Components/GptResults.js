@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux'
 import MovieList from './MovieList'
 
 const GptResults = () => {
-    const {movieResults, movieNames} = useSelector((store)=> store?.gpt)
-    if(!movieResults || !movieNames) return (<div className="w-full h-full mt-[5%]"></div>);
+    const {movieResults, movieNames, searchInitiated} = useSelector((store)=> store?.gpt)
+    if((!movieResults || !movieNames) && searchInitiated) return (<div className="w-full h-full mt-[5%] text-white font-bold text-3xl text-center"> Loading...</div>);
   return (
     <div className="w-full bg-black bg-opacity-80 mt-[5%]">
     {

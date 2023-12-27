@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import lang from "../Utils/languageConstants";
 import openai from "../Utils/openai";
 import fetchMovieData from "../Hooks/fetchMovieData";
-import { updateMovieNames, updateMovieResults } from "../Store/Slice/gptSlice";
+import { setSearchInitiated, updateMovieNames, updateMovieResults } from "../Store/Slice/gptSlice";
 
 const GptSearchbar = () => {
   const langKey = useSelector((store)=>store?.config?.lang)
@@ -18,6 +18,7 @@ const GptSearchbar = () => {
     });
     //will return only top 10 results
     const gptMovieArray = chatCompletion?.choices[0].message.content.split(", ")?.slice(0,10);
+    dispatch(setSearchInitiated(true));
     getMovieData(gptMovieArray);
     dispatch(updateMovieNames(gptMovieArray));
   

@@ -6,7 +6,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../Store/Slice/userSlice";
 import { useNavigate } from "react-router-dom";
 import { LANGMAP, LOGO_URL } from "../Utils/constants";
-import {removeMovieNames, removeMovieResults, updateShowGptAttribute} from "../Store/Slice/gptSlice";
+import {removeMovieNames, removeMovieResults, setSearchInitiated, updateShowGptAttribute} from "../Store/Slice/gptSlice";
 import { updateLangKey } from "../Store/Slice/appConfigSlice";
 
 const Header = () => {
@@ -36,6 +36,7 @@ const Header = () => {
         dispatch(removeUser());
         dispatch(removeMovieResults());
         dispatch(removeMovieNames());
+        dispatch(setSearchInitiated(false))
       })
       .catch((error) => {
         console.log("sign out error : ", error);
