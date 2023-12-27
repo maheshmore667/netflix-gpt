@@ -1,12 +1,14 @@
 import { useEffect } from 'react'
 import {ACCESS_TOKEN_TMDB, UPCOMING_MOVIES} from "../Utils/constants"
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {addUpcomingMovies} from "../Store/Slice/movieSlice"
 
 const useUpcomingMovies = () =>{
     const dispatch = useDispatch();
+    const upcoming = useSelector(store=>store?.movies?.upcoming)
+
     useEffect(()=>{
-      getUpcomingMovies();
+     !upcoming && getUpcomingMovies();
     }, [])
   
     const getUpcomingMovies = async() =>{
