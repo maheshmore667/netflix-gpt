@@ -11,7 +11,7 @@ const GptSearchbar = () => {
   const searchText = useRef(null);
 
   const searchForGptResult = async() =>{
-    const gptQuery = `Act like the movie recommendation system. ${searchText?.current?.value}. Only Give results comma separated names as  eg: Sholay, Golmaal`
+    const gptQuery = `Only Give results comma separated names as  eg: Sholay, Golmaal. Act like the movie recommendation system. ${searchText?.current?.value}. `
     const chatCompletion = await openai.chat.completions.create({
       messages: [{ role: 'user', content: gptQuery}],
       model: 'gpt-3.5-turbo',

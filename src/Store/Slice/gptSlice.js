@@ -16,8 +16,14 @@ const gptSlice = createSlice({
         },
         updateMovieResults : (state, action) =>{
             return {...state, movieResults : action?.payload}
+        },
+        removeMovieResults : (state) =>{
+            return {...state, movieResults : null}
+        },
+        removeMovieNames : (state) =>{
+            return {...state, movieNames : null}
         }
     }
 })
-export const {updateShowGptAttribute, updateMovieResults, updateMovieNames} = gptSlice?.actions;
+export const {updateShowGptAttribute, updateMovieResults, updateMovieNames, removeMovieNames, removeMovieResults} = gptSlice?.actions;
 export default gptSlice.reducer;
