@@ -52,8 +52,8 @@ const Header = () => {
   }
 
   return (
-    <div className="w-full absolute flex justify-between py-2 px-2 bg-gradient-to-t from-black content-center z-30">
-      <img className="w-52 " src={LOGO_URL} alt="logo" />
+    <div className="text-sm w-full content-center flex-wrap flex absolute bg-gradient-to-t from-black content-center z-30 justify-between sm: bg-gradient-to-t from-black py-2 px-2">
+      <img className="w-20 h-12 sm:w-52 sm:h-20" src={LOGO_URL} alt="logo" />
       {user && (
         <div className="flex">
           {showGpt && <select className="text-white font-bold bg-purple-800 my-6 px-2 mr-2 rounded-md py-1" onChange={handleLanguageChange}> 
