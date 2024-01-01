@@ -35,7 +35,7 @@ const GptSearchbar = () => {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="w-1/2 mt-[10%] bg-black">
+      <div className="w-[95%] mt-[30%] sm:w-1/2 sm:mt-[10%] bg-black">
         <div className="p-2">
           <input
             type="text"
