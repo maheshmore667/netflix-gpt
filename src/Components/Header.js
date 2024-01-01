@@ -65,7 +65,7 @@ const Header = () => {
           className="text-white font-bold bg-red-800 my-6 px-2 mr-2 rounded-md py-1 font-size-md" 
           onClick={updateGptAttribute}
         >
-          {showGpt ? "HomePage" : "GPT Seatch"}
+          {showGpt ? "HomePage" : "GPT Search"}
         </button>
         <button
           className="text-red-500 font-bold bg-white my-6 px-2 mr-2 rounded-md py-1 font-size-md"
