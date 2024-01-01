@@ -56,19 +56,19 @@ const Header = () => {
       <img className="w-20 h-12 sm:w-52 sm:h-20" src={LOGO_URL} alt="logo" />
       {user && (
         <div className="flex">
-          {showGpt && <select className="text-white font-bold bg-purple-800 my-6 px-2 mr-2 rounded-md py-1" onChange={handleLanguageChange}> 
+          {showGpt && <select className="text-white font-bold bg-purple-800 my-2 sm:my-6 px-2 mr-2 rounded-md py-1" onChange={handleLanguageChange}> 
             {
               Object.keys(LANGMAP)?.map((key)=><option key={key} value={key} >{LANGMAP[key]}</option>)
             }
           </select>}
          <button
-          className="text-white font-bold bg-red-800 my-6 px-2 mr-2 rounded-md py-1 font-size-md" 
+          className="text-white font-bold bg-red-800 my-2 sm:my-6 px-2 mr-2 rounded-md py-1 font-size-md" 
           onClick={updateGptAttribute}
         >
           {showGpt ? "HomePage" : "GPT Search"}
         </button>
         <button
-          className="text-red-500 font-bold bg-white my-6 px-2 mr-2 rounded-md py-1 font-size-md"
+          className="text-red-500 font-bold bg-white my-2 sm:my-6 px-2 mr-2 rounded-md py-1 font-size-md"
           onClick={handleSignOut}
         >
           SignOut
