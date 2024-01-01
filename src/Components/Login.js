@@ -73,7 +73,7 @@ const Login = () => {
       <Header />
       <div className="w-full h-full" style={{ backgroundImage: `url('${BG_URL}')` }}>
         <div className="w-full h-full flex flex-wrap justify-center content-center">
-          <form className="sm : w-4/12  bg-black rounded-md flex flex-col text-white content-center flex-wrap opacity-90">
+          <form className="w-8/12 sm:w-4/12  bg-black rounded-md flex flex-col text-white content-center flex-wrap opacity-90">
             <label className="font-bold text-2xl my-5 mx-auto">
               {isSignIn ? "Sign In" : "Sign Up"}
             </label>
