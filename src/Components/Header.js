@@ -52,7 +52,7 @@ const Header = () => {
   }
 
   return (
-    <div className="text-sm w-full content-center flex-wrap flex absolute bg-gradient-to-t from-black content-center z-30 justify-between sm: bg-gradient-to-t from-black py-2 px-2">
+    <div className="text-sm w-full content-center flex-wrap flex absolute bg-gradient-to-t from-black content-center z-30 justify-between sm: bg-gradient-to-t from-black py-0 sm:py-2 px-2">
       <img className="w-20 h-12 sm:w-52 sm:h-20" src={LOGO_URL} alt="logo" />
       {user && (
         <div className="flex">
