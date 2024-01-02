@@ -8,6 +8,7 @@ const usePopularMovies = () =>{
     const popular = useSelector(store=>store?.movies?.popular)
     useEffect(()=>{
       !popular && getPopularMovies();
+      // eslint-disable-next-line
     }, [])
   
     const getPopularMovies = async() =>{

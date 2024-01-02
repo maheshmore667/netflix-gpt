@@ -8,6 +8,7 @@ const useNowPlayingMovies = () =>{
     const nowPlaying = useSelector(store=>store?.movies?.nowPlaying)
     useEffect(()=>{
       !nowPlaying && getNowPlayingMovies();
+       // eslint-disable-next-line
     }, [])
   
     const getNowPlayingMovies = async() =>{

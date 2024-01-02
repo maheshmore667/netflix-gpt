@@ -9,6 +9,7 @@ const useUpcomingMovies = () =>{
 
     useEffect(()=>{
      !upcoming && getUpcomingMovies();
+     // eslint-disable-next-line
     }, [])
   
     const getUpcomingMovies = async() =>{

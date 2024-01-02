@@ -8,6 +8,7 @@ const useTopRatedMovies = () =>{
     const topRated = useSelector(store=>store?.movies?.topRated)
     useEffect(()=>{
      !topRated && getTopRatedMovies();
+     // eslint-disable-next-line
     }, [])
   
     const getTopRatedMovies = async() =>{
