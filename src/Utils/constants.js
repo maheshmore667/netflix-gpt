@@ -16,4 +16,4 @@ export const LANGMAP =  {
     "marathi" : "Marathi"
 }
 
-export const OPENAI_KEY = "sk-IqSme"
+export const OPENAI_KEY = "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"
